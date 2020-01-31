@@ -1,0 +1,74 @@
+.block__nt-contentimage{
+    padding-top: 80px;
+    padding-bottom: 40px;
+    display: block;
+    position: relative;
+    &:before{
+        content:"";
+        display:block;
+        position:absolute;
+        width:4rem;
+        height:100%;
+        background-image:url(../images/big-arrow-blue.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0rem 8%;
+        top: 0px;
+        margin-left: 2rem;
+    }
+    .contentimage_wrp{
+        .title{
+
+        }
+        .sub_title{
+            background-color: $color__secondary;
+            @extend h3;
+            color:$white;
+            padding: 10px 12px 5px;
+            
+        }
+    }
+    .conts_wrp{
+        margin-top:3.5625rem;
+        h3{
+            line-height: 2.8rem;
+        }
+        strong{
+            background-color:$color__primary;
+            padding: 10px 12px 5px;
+            display:inline-block;
+        }
+        ul{
+            margin-bottom: 1rem;
+            margin-top:1rem;
+            padding-left: 40px;
+            padding-right: 0;
+            li{
+                @extend p;
+            }
+        }
+    }
+    a{
+        text-decoration:none;
+        img{
+            min-width:100%;
+        }
+        .image_title{
+            width: 100%;
+            background-color: $color__primary;
+            display: block;
+            text-align: center;
+            padding: 10px 12px 5px;
+            color: $color__secondary;
+            text-transform: uppercase;
+            @extend .animation_short;
+        }
+        &:hover{
+            .image_title{
+                background-color: $color__secondary;
+                color: $color__primary;
+            }
+        }
+    }
+    
+}

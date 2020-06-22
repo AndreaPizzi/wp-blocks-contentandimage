@@ -1,3 +1,22 @@
+ /**
+ * Custom block category
+ */
+
+function nt_next_block_categories( $categories ) {
+  return array_merge(
+      $categories,
+      array(
+          array(
+              'slug' => 'ntnext_category',
+              'title' => __( 'NTNext Custom Blocks', 'ntNext' ),
+              'icon'  => 'welcome-widgets-menus',
+          ),
+      )
+  );
+}
+add_filter( 'block_categories', 'nt_next_block_categories', 10, 2 );
+
+
 // Register a Content block
 if( function_exists('acf_register_block') ) {
      
